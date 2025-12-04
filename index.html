@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>越南新聞簡報：2025年12月4日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+            background-color: #f0f9ff; /* 淺藍色背景 */
+            color: #0f172a; /* Slate 900 文字 */
+        }
+        /* 自定義圖表容器樣式 */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid #0d9488; /* 藍綠色強調邊框 */
+        }
+        .highlight-text {
+            color: #f97316; /* 橙色強調 */
+            font-weight: 800;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            padding-bottom: 1.5rem;
+            border-left: 2px solid #e2e8f0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.55rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #f97316;
+            border: 2px solid white;
+        }
+        .flow-step {
+            background-color: #f1f5f9;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+    </style>
+    <!-- 
+        配色方案：活力藍綠 & 橙色
+        背景：#f0f9ff
+        卡片：#ffffff
+        主要強調色 (藍綠)：#0d9488
+        次要強調色 (橙色)：#f97316
+        文字：#0f172a
+        
+        未使用 SVG。
+        未使用 Mermaid JS。
+    -->
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-slate-900 text-white py-12 px-4 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">越南每日新聞透視</h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto">2025年12月4日</p>
+        <div class="mt-6 inline-block bg-orange-500 text-white font-bold py-2 px-6 rounded-full uppercase text-sm tracking-wider">
+            重點簡報
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+
+        <!-- Intro Text -->
+        <section class="mb-12 text-center max-w-4xl mx-auto">
+            <p class="text-lg text-slate-700 leading-relaxed">
+                今日頭條描繪了一個國家正面臨<strong>現代數位威脅</strong>和<strong>日益嚴峻的自然災害</strong>的景象。從破紀錄的1400億越南盾跨國詐騙案，到威脅沿海地區的年度第21號颱風，越南面臨著重大挑戰。與此同時，國會結束了一個具有歷史意義的立法改革任期。
+            </p>
+        </section>
+
+        <!-- Section 1: Cybercrime -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-teal-600 pb-2 inline-block">犯罪：跨國「獵狐」行動</h2>
+                <p class="text-slate-700 mb-6">
+                    越南與柬埔寨警方聯手瓦解了一個位於柴楨省（Svay Rieng）的大型詐騙集團。該集團透過冒充 <strong>Vingroup（溫納集團）</strong> 和 <strong>Doji（杜吉珠寶）</strong> 等值得信賴的企業集團，詐騙了數百名受害者。財務損失規模驚人，僅一名受害者的損失就佔了總被盜金額的近20%。
+                </p>
+            </div>
+
+            <!-- Big Stats -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center border-l-4 border-orange-500">
+                    <div class="text-4xl font-bold text-slate-800">1400億</div>
+                    <div class="text-sm text-slate-500 uppercase font-semibold mt-2">越南盾 總損失</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center border-l-4 border-teal-600">
+                    <div class="text-4xl font-bold text-slate-800">32</div>
+                    <div class="text-sm text-slate-500 uppercase font-semibold mt-2">名嫌疑人被捕</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center border-l-4 border-indigo-600 col-span-2 md:col-span-1 md:col-start-1 md:col-end-3">
+                    <div class="text-4xl font-bold text-slate-800">~500</div>
+                    <div class="text-sm text-slate-500 uppercase font-semibold mt-2">名受害者</div>
+                </div>
+            </div>
+
+            <!-- Chart 1 -->
+            <div class="card flex flex-col justify-center">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 text-center">財務影響：總損失 vs. 單一受害者</h3>
+                <div class="chart-container">
+                    <canvas id="scamChart"></canvas>
+                </div>
+                <p class="text-sm text-slate-500 mt-4 text-center italic">
+                    河內一名單親母親損失了270億越南盾，凸顯了「殺豬盤」詐騙手法的精密與惡劣。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Climate Crisis -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-orange-500 pb-2 inline-block">氣候：極端的一年</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <p class="text-slate-700 mb-4">
+                        2025年已被正式標記為氣候異常的一年。國家水文氣象預報中心警告，<strong>第16號颱風</strong>可能正在形成。今年東海的風暴頻率已打破自1961年以來的紀錄。
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="stormChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Nha Trang Timeline -->
+                <div class="card bg-slate-50">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">芽莊：一個月內第4次撤離</h3>
+                    <p class="text-slate-700 mb-6 text-sm">
+                        芽莊居民已筋疲力盡。在經歷歷史性洪水的短短12天後，上游水庫再次洩洪，迫使居民進行又一次撤離。
+                    </p>
+                    
+                    <div class="pl-2">
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-teal-700">11月初</h4>
+                            <p class="text-sm text-slate-600">本季首波重大洪水事件。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-teal-700">11月中旬</h4>
+                            <p class="text-sm text-slate-600">因暴雨進行第二次撤離。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-teal-700">11月22日 (大約)</h4>
+                            <p class="text-sm text-slate-600">「歷史性洪水」- 造成嚴重破壞。</p>
+                        </div>
+                        <div class="timeline-item border-l-0">
+                            <h4 class="font-bold text-orange-600 text-lg">12月4日 (今日)</h4>
+                            <p class="text-sm text-slate-800 font-medium">第4次撤離。在第16號颱風的警報聲中，水庫進行洩洪。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Legislation -->
+        <section class="mb-12">
+            <div class="card bg-white">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">政治：第十五屆國會</h2>
+                        <p class="text-slate-700 mb-4">
+                            第十五屆國會結束任期，因其史無前例的決策而備受讚譽，特別是第30號決議在疫情期間賦予了政府緊急權力。
+                        </p>
+                        <ul class="space-y-2 text-slate-600">
+                            <li class="flex items-center"><span class="text-teal-500 mr-2">✔</span> 數位轉型 (電子國會)</li>
+                            <li class="flex items-center"><span class="text-teal-500 mr-2">✔</span> 行政區劃合併</li>
+                            <li class="flex items-center"><span class="text-teal-500 mr-2">✔</span> 危機應對靈活性</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="chart-container">
+                            <canvas id="lawChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Infrastructure & Anomalies -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            
+            <!-- Highway Flooding -->
+            <div class="card">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 text-orange-600">基礎設施故障</h2>
+                <p class="text-slate-700 mb-6 text-sm">
+                    <strong>藩切-油格高速公路 (Phan Thiet - Dau Giay Highway)</strong> 這條關鍵動脈因50公分深的洪水而癱瘓。價值數百萬美元的防洪泵浦系統失靈，原因竟令人震驚：遭竊。
+                </p>
+                
+                <div class="space-y-2">
+                    <div class="flow-step border border-slate-200">
+                        <div class="font-bold text-slate-800">1. 基礎設施投資</div>
+                        <div class="text-xs text-slate-500">安裝泵浦和防洪牆以防止淹水。</div>
+                    </div>
+                    <div class="flow-arrow">⬇</div>
+                    <div class="flow-step border-2 border-red-200 bg-red-50">
+                        <div class="font-bold text-red-700">2. 安全漏洞</div>
+                        <div class="text-xs text-red-600">泵浦的電源電纜 <strong>遭竊</strong>。</div>
+                    </div>
+                    <div class="flow-arrow">⬇</div>
+                    <div class="flow-step border border-slate-200">
+                        <div class="font-bold text-slate-800">3. 系統故障</div>
+                        <div class="text-xs text-slate-500">降雨發生，泵浦無法啟動。</div>
+                    </div>
+                    <div class="flow-arrow">⬇</div>
+                    <div class="flow-step border border-slate-200">
+                        <div class="font-bold text-slate-800">4. 交通癱瘓</div>
+                        <div class="text-xs text-slate-500">高速公路封閉數小時；交通完全中斷。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deo Ngang Anomaly -->
+            <div class="card bg-slate-900 text-white border-none">
+                <h2 class="text-2xl font-bold text-teal-400 mb-4">大自然的警告？</h2>
+                <div class="flex items-center justify-center mb-6">
+                    <div class="text-6xl">🪱⚡</div>
+                </div>
+                <h3 class="text-xl font-bold mb-2">橫山關 (Deo Ngang) 異象</h3>
+                <p class="text-slate-300 mb-4 text-sm leading-relaxed">
+                    廣治省 (Quang Tri) 的居民對橫山關發生的一連串令人不安的事件感到恐慌。
+                </p>
+                <div class="bg-slate-800 rounded p-4 mb-4">
+                    <ul class="list-disc list-inside space-y-2 text-slate-300 text-sm">
+                        <li><strong>事件 1：</strong> 大量蚯蚓死亡並湧上路面和庭院。</li>
+                        <li><strong>事件 2：</strong> 隨後不久，國道1號出現長條裂縫。</li>
+                        <li><strong>擔憂：</strong> 當地人懷疑即將發生山體滑坡或地質變動。</li>
+                    </ul>
+                </div>
+                <p class="text-xs text-slate-400 italic text-center">
+                    當局目前正在調查該區域的地質穩定性。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-6 text-center text-sm">
+        <p>&copy; 2025 越南新聞簡報. 資料來源：Tuổi Trẻ, VTV, 和 Thanh Niên.</p>
+    </footer>
+
+    <!-- Chart.js Scripts -->
+    <script>
+        // --- 標籤換行工具函數 (支援中文) ---
+        // 簡單修改：對於中文，我們可以依賴空格或直接讓 Chart.js 處理，
+        // 這裡我們會在數據標籤中手動插入換行（陣列）以確保最佳顯示效果。
+        
+        // --- 通用工具提示配置 ---
+        const commonTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(''); // 中文連接不需要空格
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- 1. 詐騙損失圖表 (條形圖) ---
+        const ctxScam = document.getElementById('scamChart').getContext('2d');
+        // 手動分行以適應中文寬度
+        const processedLabelsScam = [
+            ['總被盜金額', '(所有受害者)'], 
+            ['單一最大', '受害者損失']
+        ];
+
+        new Chart(ctxScam, {
+            type: 'bar',
+            data: {
+                labels: processedLabelsScam,
+                datasets: [{
+                    label: '金額 (十億越南盾)',
+                    data: [140, 27],
+                    backgroundColor: [
+                        'rgba(13, 148, 136, 0.8)', // Teal
+                        'rgba(249, 115, 22, 0.8)'  // Orange
+                    ],
+                    borderColor: [
+                        'rgba(13, 148, 136, 1)',
+                        'rgba(249, 115, 22, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y', // 水平條形圖
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipOptions,
+                    title: {
+                        display: true,
+                        text: '詐騙影響比例 (十億越南盾)'
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: { display: true, text: '十億越南盾 (Billion VND)' }
+                    }
+                }
+            }
+        });
+
+        // --- 2. 風暴統計圖表 (條形圖) ---
+        const ctxStorm = document.getElementById('stormChart').getContext('2d');
+        const processedLabelsStorm = [
+            ['2025年', '紀錄'], 
+            ['歷史平均', '(預估)']
+        ];
+
+        new Chart(ctxStorm, {
+            type: 'bar',
+            data: {
+                labels: processedLabelsStorm,
+                datasets: [{
+                    label: '風暴/熱帶低氣壓數量',
+                    data: [21, 12], // 12 為預估平均值供參考
+                    backgroundColor: [
+                        'rgba(249, 115, 22, 0.8)', // Orange for Warning
+                        'rgba(148, 163, 184, 0.6)' // Slate for context
+                    ],
+                    borderColor: [
+                        'rgba(249, 115, 22, 1)',
+                        'rgba(148, 163, 184, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipOptions,
+                    title: {
+                        display: true,
+                        text: '2025年：東海風暴創紀錄的一年'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: '數量' }
+                    }
+                }
+            }
+        });
+
+        // --- 3. 立法統計圖表 (甜甜圈圖) ---
+        const ctxLaw = document.getElementById('lawChart').getContext('2d');
+        const processedLabelsLaw = [
+            ['通過的', '法律'], 
+            ['通過的', '決議']
+        ];
+
+        new Chart(ctxLaw, {
+            type: 'doughnut',
+            data: {
+                labels: processedLabelsLaw,
+                datasets: [{
+                    label: '立法文件',
+                    data: [99, 165],
+                    backgroundColor: [
+                        'rgba(13, 148, 136, 0.8)', // Teal
+                        'rgba(67, 56, 202, 0.8)'   // Indigo
+                    ],
+                    borderColor: [
+                        '#ffffff',
+                        '#ffffff'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: commonTooltipOptions,
+                    title: {
+                        display: true,
+                        text: '第十五屆國會產出'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
